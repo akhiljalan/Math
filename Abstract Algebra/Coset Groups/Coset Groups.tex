@@ -1,0 +1,77 @@
+\documentclass[letterpaper]{article} % or whatever
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage [pdftex]{graphicx}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fancyvrb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{relsize}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{scrextend}
+\usepackage{cancel}
+\usepackage{tikz-cd}
+\usepackage{setspace}
+\usepackage{wasysym}
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+\usepackage{blindtext}
+\usepackage{tikz}
+\usepackage[nottoc,numbib]{tocbibind}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{wasysym}
+
+\newcommand{\norm}{\|}
+\newcommand{\arrbegin}{\begin{eqnarray}}
+\newcommand{\arrend}{\end{eqnarray}}
+\newcommand{\summ}{\sum\abslimits_}
+\newcommand{\barr}{\overline} 
+\newcommand{\setz}{z = x + iy}
+\newcommand{\setzangle}{z = re^{i\theta}}
+\newcommand{\absl}{\left|}
+\newcommand{\absr}{\right|}
+\newcommand{\minsec}{\subsubsection*}
+\newcommand{\integr}{\int\limits_}
+\newcommand{\integrC}{\int\limits_{C}^{}}
+\newcommand{\prob}{\subsection*}
+\newcommand{\del}{\partial}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\rarr}{\Rightarrow}
+
+
+\begin{document}
+\title{Coset Groups}
+\author{Akhil Jalan}
+\date{Feb 10, 2017}
+\maketitle
+
+\prob{Existence Proof}
+
+We define a \textbf{normal subgroup} of a group $G$ to be a subgroup $H \leq G$ such that for all $a \in G$, $aH = Ha$. Equivalently, $aHa^{-1} = H$ for all $a \in G$. 
+
+We claim that the set of all left cosets of a normal subgroup $H$ of a group $G$ is itself a group (denote this $H_{l}$, where $(aH) \cdot (bH) = (a * b)H$. The right coset group (denoted $H_{r}$) is symmetric. We'll show this is a group. 
+
+1. The operation is well defined. Let $a, b \in G$. Then $aH \cdot bH = (Ha) \cdot (bH) = H(a * b)H = (a*b)HH = (a*b) H$. 
+
+2. The identity is $eH = H$. For any $aH, Hb$ we have $(aH) \cdot H = (a)(HH) = aH$, $H \cdot aH = (HH)a = Ha = aH$ and symmetric arguments apply to $Hb$. 
+
+3. For any $aH, Hb$ their inverses are precisely $a^{-1}H$ and $Hb^{-1}$. 
+
+4. The group operation on $G$ is associative, from which it follows that it is on $H_l, H_r$ respectively. 
+
+\end{document}
